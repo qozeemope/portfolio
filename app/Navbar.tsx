@@ -1,55 +1,92 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 
-
-
 function Navbar() {
-  const path = usePathname();  
-  const menuItems = [
-    {
-        name: "Home",
-        link: "/"
-    },
-    {
-        name: "Skills",
-        link: "/skills"
-    },
-    {
-        name: "Projects",
-        link: "/projects"
-    },
-    {
-        name: "Experience",
-        link: "/experience"
-    },
+  const path = usePathname();
 
-    {
-        name: "Reviews",
-        link: "/reviews"
-    },
+  const [dark, setDark] = useState(false);
+
+  const menuItems = [
+    { name: "Home", link: "/" },
+    { name: "Skills", link: "/skills" },
+    { name: "Projects", link: "/projects" },
+    { name: "Experience", link: "/experience" },
+    { name: "Reviews", link: "/reviews" },
   ]
 
-  
+  // load saved theme
+  useEffect(() => {
+    const saved = localStorage.getItem("theme");
+
+    if (saved === "dark") {
+      document.documentElement.classList.add("dark");
+      setDark(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const root = document.documentElement;
+
+    if (dark) {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setDark(false);
+    } else {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setDark(true);
+    }
+  };
+
   return (
-        <nav className='py-4 flex items-center justify-between'>
-            <div className='font-black text-3xl'>  {"<THEDEVQ />"}</div>
-            <ul className='flex items-center justify-between gap-10'>
-                {
-                   menuItems.map((menu) => {
-                    const isActive = menu.link === path;
-                    return (
-                        <li key={menu.link} className={isActive ? "font-bold text-[#24b81d]" : "text-black"}>
-                            <Link href={menu.link}>{menu.name}</Link>
-                        </li>
-                    )
-                   })
-                }
-            </ul>
-                <button className='bg-[#24b81d] gap-4 cursor-pointer text-white py-2 px-4 rounded-sm'>Contact me</button>
-        </nav>
-    )
+    <nav className='py-4  flex items-center justify-between'>
+
+     
+      <div className='font-black text-3xl'>
+        {"<THEDEVQ />"}
+      </div>
+
+      {/* Menu */}
+      <ul className='flex items-center justify-between gap-10'>
+        {menuItems.map((menu) => {
+          const isActive = menu.link === path;
+
+          return (
+            <li
+              key={menu.link}
+              className={
+                isActive
+                  ? "font-bold text-primary hover:text-primary-hover"
+                  : "text-text hover:text-primary-hover"
+              }
+            >
+              <Link href={menu.link}>{menu.name}</Link>
+            </li>
+          )
+        })}
+      </ul>
+
+      <div className="flex items-center gap-3">
+
+       
+        <button
+          onClick={toggleTheme}
+          className="border border-border text-text px-3 py-2 rounded-md hover:bg-card-secondary transition"
+        >
+          {dark ? "☀️" : "🌙"}
+        </button>
+
+     
+        <button className='bg-primary gap-4 cursor-pointer text-white py-2 px-4 rounded-sm hover:bg-primary-hover'>
+          Contact me
+        </button>
+
+      </div>
+
+    </nav>
+  )
 }
 
 export default Navbar
