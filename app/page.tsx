@@ -55,14 +55,14 @@ export default function Home() {
             <button className="bg-card-secondary py-2 px-10 w-full cursor-pointer flex items-center justify-center gap-2 hover:bg-primary-hover/20"><h5>Download CV</h5>
             <Image src={download} alt="Download CV" className="w-4 h-4 inline-block ml-1" />
             </button>
-            <button className="bg-card-secondary py-2 px-10 w-full cursor-pointer flex items-center justify-center gap-2 hover:bg-primary-hover/20"><h5>Contact Me</h5>
+            {/* <button className="bg-card-secondary py-2 px-10 w-full cursor-pointer flex items-center justify-center gap-2 hover:bg-primary-hover/20"><h5>Contact Me</h5>
               <Image src={chat} alt="Contact Me" className="w-4 h-4 inline-block ml-1" />
-            </button>
+            </button> */}
           </div>
         </div>
 
 
-        <div className="flex flex-col flex-1 ">
+        <div className="flex flex-col flex-1 mt-24">
          <h1 className="text-text-secondary text-2xl">
   Hello{" "}
   <span className="inline-block animate-wave origin-[70%_70%]">
@@ -72,14 +72,14 @@ export default function Home() {
 </h1>
           <h2 className="font-bold text-5xl mt-4">I am <span className="text-primary text-bold">Qozeem Salami</span></h2>
           <HeroTitle />
-          <p className="mt-4 text-justify text-text-secondary">A passionate Full Stack Developer from Nigeria — building modern, scalable, and user-focused web applications with React, TypeScript, Python, and Django, combining clean frontend experiences with reliable backend systems.</p>
+          <p className="mt-4 text-justify text-text-secondary text-xl">I am from Nigeria and I love to build things.</p>
           <div className="flex mb-0 mt-auto gap-4 w-full">
             <div className="bg-card py-2 px-8 flex items-center justify-center gap-4 text-2xl">
-              <h3 className="font-bold text-3xl">2+</h3>
+              <h3 className="font-bold text-3xl">3+</h3>
               <p className="text-primary text-xl">Years of Experience</p>
             </div>
             <div className="bg-card py-2 px-8 flex items-center justify-center gap-4 text-bold text-2xl">
-              <h3 className="font-bold text-3xl">10</h3>
+              <h3 className="font-bold text-3xl">10+</h3>
               <p className="text-primary text-xl">Projects Completed</p>
             </div>
           </div>

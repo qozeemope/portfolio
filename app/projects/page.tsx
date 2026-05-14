@@ -5,6 +5,7 @@ import Link from 'next/link'
 import stableborrow from "../assets/stableborrow.png"
 import tyrion from "../assets/tyrion.png"
 import chatit from "../assets/chatit.jpeg"
+import portfolio from "../assets/portfolio.png"
 import github from "../assets/github.png"
 import link from "../assets/link.png"
 import arrowdown from "../assets/arrowdown.png"
@@ -17,24 +18,24 @@ function Projects() {
       image: stableborrow,
       scope: "FULLSTACK",
       year: 2023,
-      description: "it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
+      description: "Stable borrow(STB) is a web3 platform with an inbuilt Defi, Gamefi and Dex protocols that enable users borrow STC using XDC and earn as they play as a gamer and exchange tokens.",
       tech: [
         "React", "Javascript", "TailwindCSS"
       ],
-      live_url: "",
-      github: "",
+      live_url: "https://www.stableborrow.com/",
+      github: "https://github.com/STB-Stable-Borrow/stable-borrow-mvp",
     },
     {
       name: "Tyrion",
       image: tyrion,
       scope: "FULLSTACK",
       year: 2023,
-      description: "",
+      description: "Tyrion is an e-cormmerce and decentralize exchange with unique AMM and supports p2p and more.",
       tech: [
         "React", "Javascript", "TailwindCSS"
       ],
-      live_url: "",
-      github: "",
+      live_url: "https://tyrion-two.vercel.app/",
+      github: "https://github.com/TYRIONSTORE/tyrion",
     },
     {
       name: "ChatIT",
@@ -46,20 +47,32 @@ function Projects() {
         "React", "Javascript", "TailwindCSS"
       ],
       live_url: "https://chatit-sigma.vercel.app/",
-      github: "",
+      github: "https://github.com/CHATit-Organization/CHATit",
     },
     {
-      name: "Fancord",
-      image: tyrion,
-      scope: "FULLSTACK",
-      year: 2023,
+      name: "Porfolio",
+      image: portfolio,
+      scope: "Frontend",
+      year: 2026,
       description: "",
       tech: [
-        "React", "Javascript", "TailwindCSS"
+        "Nextjs", "Typescript", "TailwindCSS"
       ],
       live_url: "",
-      github: "",
+      github: "https://github.com/qozeemope/portfolio",
     },
+    // {
+    //   name: "Fancord",
+    //   image: tyrion,
+    //   scope: "FULLSTACK",
+    //   year: 2023,
+    //   description: "",
+    //   tech: [
+    //     "React", "Javascript", "TailwindCSS"
+    //   ],
+    //   live_url: "",
+    //   github: "",
+    // },
   ]
   return (
    <div className="flex flex-col bg-background text-text py-4 px-20">
@@ -97,12 +110,14 @@ function Projects() {
           </ul>
 
           <div className="flex gap-3 mt-4 text-sm">
-           <Link href={project.live_url}>
+           <Link href={project.live_url}  target="_blank"
+  rel="noopener noreferrer">
               <button className='cursor-pointer hover:bg-primary-hover/20 border-gray-300 border rounded-full px-4 py-2 flex items-center justify-center gap-2'> 
             <Image src={link} alt="link"  className='w-4 h-4'/>Live</button> 
           
             </Link>
-            <Link href={project.github}>
+            <Link href={project.github}  target="_blank"
+  rel="noopener noreferrer">
               <button className='cursor-pointer hover:bg-primary-hover/20 border-gray-300 border rounded-full px-4 py-2 flex items-center justify-center gap-2'>
             <Image src={github} alt="github" className='w-4 h-4' />Code</button>
             </Link>

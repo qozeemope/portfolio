@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
+import logo from "./assets/logo.png"
+import Image from 'next/image'
 
 function Navbar() {
   const path = usePathname();
@@ -10,10 +12,10 @@ function Navbar() {
 
   const menuItems = [
     { name: "Home", link: "/" },
+    {name: "About", link: "/about"},
     { name: "Skills", link: "/skills" },
     { name: "Projects", link: "/projects" },
-    { name: "Experience", link: "/experience" },
-    { name: "Reviews", link: "/reviews" },
+    
   ]
 
   // load saved theme
@@ -44,9 +46,10 @@ function Navbar() {
     <nav className='py-4  flex items-center justify-between'>
 
      
-      <div className='font-black text-3xl'>
+      {/* <div className='font-black text-3xl'>
         {"<THEDEVQ />"}
-      </div>
+      </div> */}
+      <Image src={logo} alt='=logo' className='w-10 h-10' />
 
       {/* Menu */}
       <ul className='flex items-center justify-between gap-10'>
