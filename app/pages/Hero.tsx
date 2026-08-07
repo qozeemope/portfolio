@@ -431,7 +431,7 @@ active:scale-95
                 hover:bg-primary-hover/20 transition
               "
             >
-              <h5>
+              <h5 className='text-xs'>
                 Download Resume
               </h5>
 
