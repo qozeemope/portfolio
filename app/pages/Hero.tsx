@@ -408,7 +408,7 @@ active:scale-95
               cursor-pointer text-white
                rounded-lg w-full
               hover:bg-primary-hover
-              transition py-2
+              transition py-4
             "
           >
             <Image
@@ -426,7 +426,7 @@ active:scale-95
               href="/Salami Qozeem Opeyemi_Resume.pdf"
               download
               className="
-                 px-2 w-full py-2
+                 px-2 w-full py-4
                 flex items-center justify-center
                 hover:bg-primary-hover/20 transition
               "
