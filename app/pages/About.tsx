@@ -13,7 +13,7 @@ function About() {
 
       <Glowline />
 
-      <p className="mt-8 md:mt-12 text-text-secondary text-base md:text-lg leading-8 flex flex-col">
+      <p className="mt-8 md:mt-12 text-sm text-secondary md:text-lg leading-8 flex flex-col">
         <span className="mb-6 md:mb-8 text-2xl md:text-3xl font-black text-text">
           Hey, I'm Qozeem
         </span>

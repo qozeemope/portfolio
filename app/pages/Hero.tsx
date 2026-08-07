@@ -303,7 +303,7 @@ active:scale-95
             className="
               font-bold
               text-3xl
-              sm:text-xl
+              sm:text-lg
               md:text-2xl
               lg:text-3xl
               mt-4
@@ -337,7 +337,7 @@ active:scale-95
             className="
               mt-6
               text-text-secondary
-              text-base
+              text-sm
               md:text-lg
               lg:text-xl
               leading-relaxed
@@ -360,18 +360,18 @@ active:scale-95
             <div
               className="
                 bg-card
-                py-6 px-6
+                py-4 px-4
                 rounded-2xl
                 flex items-center gap-4
                 justify-center
-                lg:justify-start
+                lg:justify-start text-sm
               "
             >
-              <h3 className="font-bold text-2xl">
+              <h3 className="font-bold text-lg">
                 3+
               </h3>
 
-              <p className="text-primary text-lg">
+              <p className="text-primary">
                 Years of Experience
               </p>
             </div>
@@ -383,14 +383,14 @@ active:scale-95
                 rounded-2xl
                 flex items-center gap-4
                 justify-center
-                lg:justify-start
+                lg:justify-start text-sm
               "
             >
-              <h3 className="font-bold text-2xl">
+              <h3 className="font-bold text-lg">
                 10+
               </h3>
 
-              <p className="text-primary text-lg">
+              <p className="text-primary">
                 Projects Completed
               </p>
             </div>
@@ -398,7 +398,7 @@ active:scale-95
 
           
 
-         <div className="flex w-full gap-2 mx-auto mt-8">
+         <div className="flex w-full gap-2 mx-auto text-sm mt-8">
           <a
             href="mailto:qozeemopeyemi2008@gmail.com"
             target="_blank"
@@ -417,7 +417,7 @@ active:scale-95
               className="w-4 h-4"
             />
 
-            <h5 className="text-sm">Hire Me</h5>
+            <h5>Hire Me</h5>
           </a>
 
           
@@ -426,12 +426,12 @@ active:scale-95
               href="/Salami Qozeem Opeyemi_Resume.pdf"
               download
               className="
-                 px-4 w-full
+                 px-2 w-full
                 flex items-center justify-center gap-2
                 hover:bg-primary-hover/20 transition
               "
             >
-              <h5 className="text-sm">
+              <h5>
                 Download Resume
               </h5>
 
