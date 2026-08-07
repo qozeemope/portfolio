@@ -427,7 +427,7 @@ active:scale-95
               download
               className="
                  px-2 w-full
-                flex items-center justify-center gap-2
+                flex items-center justify-center
                 hover:bg-primary-hover/20 transition
               "
             >
