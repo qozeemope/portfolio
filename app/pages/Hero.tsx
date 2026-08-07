@@ -360,7 +360,7 @@ active:scale-95
             <div
               className="
                 bg-card
-                py-4 px-4
+                py-2 px-2
                 rounded-2xl
                 flex items-center gap-4
                 justify-center
@@ -379,7 +379,7 @@ active:scale-95
             <div
               className="
                 bg-card
-                py-6 px-6
+                py-2 px-2
                 rounded-2xl
                 flex items-center gap-4
                 justify-center
